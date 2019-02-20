@@ -39,9 +39,9 @@ public class MyThread1 extends Thread {
                 Thread.sleep(1000);
             }
            
-            ptrDatiC.mutex1.Wait();
+            //ptrDatiC.mutex1.Wait();
             ptrDatiC.push(n);
-            ptrDatiC.mutex1.Signal();
+            //ptrDatiC.mutex1.Signal();
 
         } catch (InterruptedException e) {
             System.out.println("Thread " + nome + " Interrotto");

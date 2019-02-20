@@ -25,14 +25,14 @@ public class DatiCondivisi {
         schermo = new Schermo();
     }
 
-    public void push(int num) {
+    synchronized public void push(int num) {
         if (numEl < MAXEL) {
             v[numEl] = num;
             numEl++;
         }
     }
 
-    public int getNum(int index) {
+    synchronized public int getNum(int index) {
         int value = 0;
 
         value = v[index];
@@ -40,7 +40,7 @@ public class DatiCondivisi {
         return value;
     }
     
-    public Schermo getSchermo() {
+    synchronized public Schermo getSchermo() {
         return schermo;
     }
 }
